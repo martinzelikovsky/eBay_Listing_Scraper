@@ -1,11 +1,6 @@
-from bs4 import BeautifulSoup
-import numpy as np
-import pandas as pd
 from selenium import webdriver
 import requests
-import lxml
 import openpyxl
-from openpyxl import Workbook
 import time
 import os
 import fnmatch
