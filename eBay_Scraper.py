@@ -61,7 +61,7 @@ class eBay_Scraper:
                      self.ws.cell(4, self.folder_col).value = 'Image Folder Path'
 
               listing_url = 'https://www.ebay.com/itm/{}'.format(self.IDs[self.j])
-              self.ws.cell(self.j + 5, self.folder_col).value = self.image_folder_path
+              self.ws.cell(self.j + 5, self.folder_col).value = '=HYPERLINK("{}")'.format(self.image_folder_path)
               self.driver.get(listing_url)
               try:
                      self.driver.find_element_by_id(self.expand_image_id).click() # Clicks to expand image
